@@ -148,13 +148,39 @@ aside ul {
   padding: 5% 0 0 5%;
 }
 
+@media screen and (max-width: 960px) {
+  main {
+    grid-template-rows: 1fr 3fr;
+  }
+  aside {
+    grid-column: span 2;
+  }
+  aside ul {
+    height: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
+  }
+  aside li:first-of-type {
+    grid-column: 1;
+  }
+  figure {
+    grid-template-columns: 1.5fr 2fr !important;
+  }
+  section {
+    padding: 0 !important;
+  }
+  #container {
+    overflow: hidden;
+  }
+}
+
 /* ---------- section */
 
 section {
   padding: 0 0 0 5%;
 }
 
-section h3 {
+.sale-header {
   color: white;
   background-color: #39b54a;
   padding: 3%;
@@ -166,10 +192,12 @@ section h3 {
   grid-template-rows: 1fr 1fr 1fr;
 }
 
-figure {
+figure a {
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: repeat(6, 1fr);
+  text-decoration: none;
+  color: black;
 }
 
 figure img {
@@ -205,6 +233,12 @@ figcaption {
 .discount-price span {
   background-color: #ffdf4f;
   padding: 0.5%;
+}
+
+@media screen and (max-width: 960px) {
+  section {
+    grid-column: span 2;
+  }
 }
 
 /* ---------- footer */
